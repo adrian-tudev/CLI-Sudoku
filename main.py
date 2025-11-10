@@ -2,15 +2,15 @@ import game
 import handler
 
 def get_difficulty():
-    print("Select your difficulty: easy/medium/hard")
+    print("Select your difficulty: [e]asy/[m]edium/[h]ard")
     while True:
         input_difficulty = input().strip().lower()
         match input_difficulty:
-            case "easy":
+            case "easy" | "e":
                 return 0
-            case "medium":
+            case "medium" | "m":
                 return 1
-            case "hard":
+            case "hard" | "h":
                 return 2
             case _:
                 print("Invalid input, please try again:")
